@@ -1,0 +1,13 @@
+.HomeContainer{
+
+    display: grid;
+    grid-template-rows: 8% auto 4%;
+ 
+    height: 150vh;
+    gap: 8px;
+    
+}
+
+.GridItem{
+    background-color: rgba(241, 241, 241, 0.308);
+}

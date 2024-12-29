@@ -1,0 +1,16 @@
+.RoutingCont{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px;
+}
+a{
+    text-decoration: none;
+  color: black;
+    
+}
+
+a:hover{
+  text-decoration: none;
+color: blue;
+  
+}

@@ -1,0 +1,10 @@
+form{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: rgb(240, 238, 234);
+    margin: auto;
+    padding: 8px;
+
+}

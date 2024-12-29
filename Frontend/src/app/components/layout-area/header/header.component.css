@@ -1,0 +1,85 @@
+.Header {
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.AboutMeCont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 70px 44px;
+    gap: 8px;
+}
+
+.Text ,.Text2 {
+    position: relative;
+    color: rgba(241, 241, 241, 0.308);
+    -webkit-text-stroke: 0.3vw rgba(241, 241, 241, 0.308);
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;    /* Prevent text from wrapping */
+    overflow: hidden;       /* Prevent overflow outside the container */
+}
+
+.Text::before {
+    content: attr(data-text);  /* Use the data-text attribute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(68, 46, 46);
+    -webkit-text-stroke: 0vw rgba(241, 241, 241, 0.308);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
+
+.Text2::before {
+    content: attr(data-text);  /* Use the data-text attribute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0vw rgb(202, 202, 202);
+    /* overflow: hidden; */
+    animation: animate2 4s linear forwards;
+}
+
+
+
+@keyframes animate2 {
+    0% {
+       color: rgb(255, 255, 255);
+    }
+    40%{
+        color: rgb(198, 198, 198);
+    }
+    70% {
+        color: rgb(148, 148, 148);
+    }
+    90%{
+      color:   rgb(70, 70, 70);
+    }
+    100% {
+    color: black;
+    }
+}
+

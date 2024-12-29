@@ -1,0 +1,18 @@
+.Logo{
+    height: 25px;
+    width: 25px;
+}
+
+#FooterCont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    margin: auto;
+    align-items: center;
+}
+button{
+    background: none; /* Remove default button styling */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+}
