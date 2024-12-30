@@ -3,11 +3,12 @@ import { HeaderComponent } from "../../layout-area/header/header.component";
 import { FooterComponent } from "../../layout-area/footer/footer.component";
 import { RoutingComponent } from "../../layout-area/routing/routing.component";
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ProjectsComponent } from "../../layout-area/projects/projects.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, RoutingComponent,RouterModule],
+  imports: [HeaderComponent, FooterComponent, RoutingComponent, RouterModule, ProjectsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

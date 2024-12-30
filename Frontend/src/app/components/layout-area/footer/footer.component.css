@@ -1,12 +1,14 @@
 .Logo{
     height: 25px;
     width: 25px;
+  
 }
 
 #FooterCont{
     display: flex;
     justify-content: space-evenly;
-    width: 100px;
+    flex-direction: row;
+    width: 300px;
     margin: auto;
     align-items: center;
 }
@@ -16,3 +18,12 @@ button{
     padding: 0; /* Remove padding */
     cursor: pointer; /* Change cursor to pointer */
 }
+
+button:hover{
+    background: none; /* Remove default button styling */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+border-bottom: 3px solid rgb(255, 223, 127);
+}
+

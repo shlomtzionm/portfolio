@@ -1,7 +1,7 @@
 .RoutingCont{
     display: flex;
     justify-content: space-evenly;
-    margin: 8px;
+    margin: 16px;
 }
 a{
     text-decoration: none;
@@ -11,6 +11,6 @@ a{
 
 a:hover{
   text-decoration: none;
-color: blue;
+border-bottom: 3px solid rgb(255, 223, 127);
   
 }

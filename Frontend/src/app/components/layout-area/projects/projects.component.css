@@ -1,0 +1,97 @@
+/* Universal box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.projectsCont {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  gap: 45px;
+  width: 100%; /* Ensures full-width responsiveness */
+}
+
+.Header {
+  font-weight: 500;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevents text wrapping */
+  border-bottom: 3px solid rgb(239, 189, 65);
+  margin-bottom: 16px;
+  
+}
+
+.videoCont {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+  gap: 56px;
+  margin-top: 40px;
+}
+
+video {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.094);
+  width: 500px;
+  margin-bottom: 20px; /* Space below the video */
+}
+
+.Right {
+  flex-direction: row-reverse;
+}
+
+/* Mobile: Screens smaller than 400px */
+@media screen and (max-width: 400px) {
+  .projectsCont {
+    margin: 50px 24px;
+    gap: 45px;
+    padding-top: 150px;
+  }
+  video {
+    width: 85%; /* Scale video width for medium screens */
+  }
+
+  .videoCont {
+    flex-direction: column; /* Stack videos vertically on medium screens */
+    gap: 16px;
+    width: 50%;
+    margin: 0 8px;
+  }
+ 
+}
+
+/* Medium Screens: Between 400px and 850px */
+@media screen and (max-width: 850px) and (min-width: 400px) {
+  .videoCont {
+    flex-direction: column; /* Stack videos vertically on medium screens */
+    gap: 16px;
+    width: 50%;
+    margin: 0 8px;
+  }
+
+  video {
+    width: 90%; /* Scale video width for medium screens */
+  }
+
+  .projectsCont {
+    margin: 16px 24px;
+    gap: 0px;
+    /* padding-top: 90px; */
+  }
+}
+
+

@@ -1,13 +1,26 @@
-.HomeContainer{
-
+.HomeContainer {
     display: grid;
-    grid-template-rows: 8% auto 4%;
- 
-    height: 150vh;
+    grid-template-rows: 5% 50% auto 4%;  /* Default layout */
+    height: 200vh;
     gap: 8px;
-    
 }
 
-.GridItem{
+.GridItem {
     background-color: rgba(241, 241, 241, 0.308);
+}
+
+
+
+@media screen and (min-width: 720px) and (max-width: 1500px) {
+    .HomeContainer {
+        grid-template-rows: 5% 45% auto 4%; /* Adjust second row for tablets */
+    }
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    .HomeContainer {
+        grid-template-rows: 5% 25% auto 4%; /* Default layout for larger screens */
+    }
 }

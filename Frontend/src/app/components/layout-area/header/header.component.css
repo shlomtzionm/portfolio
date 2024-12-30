@@ -1,85 +1,91 @@
 .Header {
-    font-weight: 500;
-    font-size: x-large;
+  font-weight: 500;
+  font-size: x-large;
 }
 
 .AboutMeCont {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 70px 44px;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 70px;
+  gap: 8px;
 }
 
-.Text ,.Text2 {
-    position: relative;
-    color: rgba(241, 241, 241, 0.308);
-    -webkit-text-stroke: 0.3vw rgba(241, 241, 241, 0.308);
-    text-transform: uppercase;
-    display: inline-block;
-    white-space: nowrap;    /* Prevent text from wrapping */
-    overflow: hidden;       /* Prevent overflow outside the container */
+.Text {
+  position: relative;
+  color: rgba(241, 241, 241, 0.308);
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgb(239, 189, 65);
 }
 
 .Text::before {
-    content: attr(data-text);  /* Use the data-text attribute */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: rgb(68, 46, 46);
-    -webkit-text-stroke: 0vw rgba(241, 241, 241, 0.308);
-    overflow: hidden;
-    animation: animate 6s linear infinite;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: rgb(68, 46, 46);
+  overflow: hidden;
+  animation: animate 10s ease-in-out infinite;
 }
-
-
 
 @keyframes animate {
-    0% {
-        width: 0;
-    }
-    70%, 90% {
-        width: 100%;
-    }
-    100% {
-        width: 0;
-    }
+  0% {
+      width: 0;
+  }
+  35% {
+      width: 100%;
+  }
+  95% {
+      width: 100%;
+  }
+  100% {
+      width: 0;
+  }
 }
 
-
+.Text2 {
+  width: 100%;
+  height: auto;  /* Ensure the text box grows with content */
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  margin: 0 8px;
+  border: none;
+  color: rgb(255, 255, 255);
+  resize: none;
+  white-space: pre-wrap;
+  text-align: left;
+  position: relative; /* Needed for absolute positioning of ::before */
+}
 
 .Text2::before {
-    content: attr(data-text);  /* Use the data-text attribute */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0vw rgb(202, 202, 202);
-    /* overflow: hidden; */
-    animation: animate2 4s linear forwards;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* Ensure it's the same width as the container */
+  height: 100%;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  animation: animate2 5s linear;
 }
-
-
 
 @keyframes animate2 {
-    0% {
-       color: rgb(255, 255, 255);
-    }
-    40%{
-        color: rgb(198, 198, 198);
-    }
-    70% {
-        color: rgb(148, 148, 148);
-    }
-    90%{
-      color:   rgb(70, 70, 70);
-    }
-    100% {
-    color: black;
-    }
+  0% {
+      color: rgb(255, 255, 255);
+  }
+  35% {
+      color: rgb(188, 188, 188);
+  }
+  95% {
+      color: rgb(66, 66, 66);
+  }
+  100% {
+      color: rgb(0, 0, 0);
+  }
 }
-
