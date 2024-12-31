@@ -1,11 +1,16 @@
 .RoutingCont{
+  width: 1140px;
+  max-width: 90%;
+  height: 50px;
     display: flex;
-    justify-content: space-evenly;
-    margin: 16px;
+    justify-content: space-between;
+    align-items: center;
+   margin: auto;
 }
 a{
     text-decoration: none;
-  color: black;
+  color: #555;
+  margin-left: 30px;
     
 }
 

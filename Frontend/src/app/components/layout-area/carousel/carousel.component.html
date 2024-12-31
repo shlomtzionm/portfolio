@@ -1,0 +1,62 @@
+<div id="carousel" #carousel>
+  <div id="list" #list>
+    <div class="item" #item>
+      <video src="assets/vacations.mp4" autoplay loop muted alt="vacations"></video>
+      <div class="intro">
+        <div class="topic">MEAN Stack</div>
+        <div class="des">
+          I developed a VacationModel in a full-stack project, integrating MySQL with the backend to manage vacation data for users. The project included implementing authentication and authorization
+          to secure user data and ensure proper access control. One challenge I faced was ensuring that vacation cards displayed correctly after actions like "liking" or navigating between pages. I am
+          very proud to have successfully resolved this issue, delivering a seamless and secure user experience.
+        </div>
+      </div>
+    </div>
+    <div class="item" #item>
+      <video src="assets/images.mp4" alt="images" autoplay loop muted></video>
+      <div class="intro">
+        <div class="topic">AI Image Generator</div>
+        <div class="des">
+          I’m particularly passionate about this project because it allowed me to create something entirely new—images that didn’t exist before. Using AI, I was able to generate unique visuals from
+          text prompts, exploring the fascinating capabilities of machine learning. Additionally, I deployed the project to an AWS S3 bucket, ensuring efficient storage and accessibility of the
+          generated images. It was an exciting experience that combined creativity and technology in a truly innovative way.
+        </div>
+      </div>
+    </div>
+
+    <div class="item" #item>
+      <video src="assets/financal.mp4" alt="financal" autoplay loop muted></video>
+      <div class="intro">
+        <div class="topic">MERN Stack</div>
+        <div class="des">
+          In this project, I focused on integrating Angular as the frontend framework, marking my first experience with this powerful tool. The application manages all the data and calculates
+          financial savings per month. Throughout the process, I gained a deep understanding of NgRX and its advanced features, while thoroughly enjoying the opportunity to learn and grow with new
+          technologies.
+        </div>
+      </div>
+    </div>
+    <div class="item" #item>
+      <video src="assets/socket.io.mp4" alt="socket.io" autoplay loop muted></video>
+      <div class="intro">
+        <div class="topic">Socket.IO</div>
+        <div class="des">
+          While studying at John Bryce Academy, I explored the potential of Socket.IO, a technology full of opportunities for real-time communication. As part of our learning, we built a fully
+          functional chat application that enabled instant message exchange between users. This project involved implementing real-time communication, managing socket events, and ensuring a smooth and
+          responsive user experience. It gave me valuable hands-on experience with WebSockets, event-driven architecture, and building interactive applications
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+<div class="arrows">
+        <button mat-icon-button id="prev" (click)="showSlider('prev')">
+          <mat-icon>arrow_back_ios_new</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="showSlider('next')" >
+            <mat-icon>arrow_forward_ios_new</mat-icon>
+          </button>
+       
+  
+</div>

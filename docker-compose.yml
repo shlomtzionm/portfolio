@@ -1,0 +1,9 @@
+
+
+services:
+  frontend-service:
+    image: shlomtzion2608/portfolio-image:1.0
+    container_name: portfolio-container
+    ports:
+      - "80:80"  # Exposing port 80 to the host
+    restart: unless-stopped
