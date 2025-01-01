@@ -1,24 +1,19 @@
-.Header {
-  font-weight: 500;
-  font-size: x-large;
-}
-
 .AboutMeCont {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 70px;
-  gap: 8px;
+  padding: 16px;
 }
 
 .Text {
   position: relative;
   color: rgba(241, 241, 241, 0.308);
   display: inline-block;
-  white-space: nowrap;
   overflow: hidden;
   text-transform: uppercase;
   border-bottom: 3px solid rgb(239, 189, 65);
+  font-weight: 500;
+  font-size: x-large;
 }
 
 .Text::before {
@@ -35,57 +30,49 @@
 
 @keyframes animate {
   0% {
-      width: 0;
+    width: 0;
   }
-  35% {
-      width: 100%;
+  25% {
+    width: 50%; /* Gradually increase width */
   }
-  95% {
-      width: 100%;
+  50% {
+    width: 75%; /* Reach full width smoothly */
+  }
+  75%{
+    width: 90%; /* Reach full width smoothly */
+
+  }
+  90% {
+    width: 100%; /* Hold at full width for a while */
   }
   100% {
-      width: 0;
+    width: 0; /* Smoothly reset to 0 */
   }
 }
 
+
 .Text2 {
-  width: 100%;
-  height: auto;  /* Ensure the text box grows with content */
+  width: 80%;
+  height: auto; /* Ensure the text box grows with content */
   font-size: 16px;
   line-height: 1.5;
-  padding: 10px;
-  margin: 0 8px;
   border: none;
-  color: rgb(255, 255, 255);
   resize: none;
   white-space: pre-wrap;
   text-align: left;
-  position: relative; /* Needed for absolute positioning of ::before */
 }
 
-.Text2::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;  /* Ensure it's the same width as the container */
-  height: 100%;
-  color: rgb(0, 0, 0);
-  overflow: hidden;
-  animation: animate2 5s linear;
-}
-
-@keyframes animate2 {
-  0% {
-      color: rgb(255, 255, 255);
+@media screen and (max-width:550px) {
+  .Text {
+    font-weight: 300;
+    font-size: medium;
   }
-  35% {
-      color: rgb(188, 188, 188);
+  .Text::before {
+    font-weight: 300;
+    font-size: medium;
   }
-  95% {
-      color: rgb(66, 66, 66);
-  }
-  100% {
-      color: rgb(0, 0, 0);
+  .Text2 {
+    font-size: 12px;
+    line-height: 1.2;
   }
 }

@@ -9,7 +9,7 @@
     justify-content: space-evenly;
     flex-direction: row;
     width: 300px;
-    margin: auto;
+    margin:8px auto;
     align-items: center;
 }
 button{
@@ -18,12 +18,13 @@ button{
     padding: 0; /* Remove padding */
     cursor: pointer; /* Change cursor to pointer */
 }
+img{
+    padding-bottom: 2px;
+    border-bottom: 3px solid transparent
 
-button:hover{
-    background: none; /* Remove default button styling */
-    border: none; /* Remove border */
-    padding: 0; /* Remove padding */
-    cursor: pointer; /* Change cursor to pointer */
-border-bottom: 3px solid rgb(255, 223, 127);
 }
 
+img:hover{
+    border-bottom: 3px solid rgb(255, 223, 127);
+
+}
